@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+  </head>
   <body>
     <form>
       <input type='text' name='guess' />
@@ -9,7 +11,7 @@
       <%= message %>
     </p>
     <p>
-      <% if message == "You got the right answer!" %>
+      <% if message == "You got the right answer!" || cheat %>
         The SECRET NUMBER is <%= number %>
       <% end %>
     </p>

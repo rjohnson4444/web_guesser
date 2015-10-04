@@ -22,14 +22,15 @@ def check_guess(guess)
   elsif guess == number
     message = "You got the right answer!"
   end
-
 end
 
 get '/' do
   guess = params["guess"]
+  cheat = params["cheat"]
   message = check_guess(guess)
   erb :index, :locals => {
                           :number => number,
-                          :message => message
+                          :message => message,
+                          :cheat => cheat
                         }
 end
