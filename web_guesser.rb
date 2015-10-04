@@ -11,7 +11,9 @@ def check_guess(guess)
   number = settings.number
   guess = guess.to_i
 
-  if guess > number + 5
+  if guess == 0
+    message = ""
+  elsif guess > number + 5
     message = "Way to high!"
   elsif guess < number - 5
     message = "Way to low!"
